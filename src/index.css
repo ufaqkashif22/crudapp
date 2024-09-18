@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Urbanist"
+}
+.card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-body {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Adjust the number of lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 980px) {
+  .section-form .form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-post ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 720px) {
+  .section-post ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
